@@ -69,12 +69,15 @@ export ZSH="$HOME/.oh-my-zsh"
 # homebrew
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 
+# Custom plugins
+export  PATH="$HOME/bin:$PATH"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python uv vscode kona jm docker docker-compose terraform)
+plugins=(git python uv vscode kona jm docker docker-compose terraform azure custom_azure)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Environment Variables
-export GIT_COMMIT_AUTHOR="Joel M <jmicaliz@gmail.com>"
+export GIT_COMMIT_AUTHOR="Joel Micalizzi <jmicalizzi@bbrpartners.com>"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
