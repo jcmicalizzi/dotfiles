@@ -26,3 +26,11 @@ brew "kona"
 brew "rlwrap"
 
 brew "coder"
+
+tap "hashicorp/tap"
+brew "hashicorp/tap/terraform"
+
+brew "tflint"
+
+brew "snowflake-cli"
+brew "azure-cli"

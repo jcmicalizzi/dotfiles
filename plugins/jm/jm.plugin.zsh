@@ -38,5 +38,34 @@ jm_git_commit(){
   fi
 }
 
+jm_git_work_log(){
+  output="jm_git_work_log.txt"
+  rm -f ~/$output  # Clear the file if it exists
+
+  from="$1" # Date format: YYYY-MM-DD
+  to="$2"
+  
+  start_dir=$(pwd)
+
+  for dir in ~/repos/*/; do
+    if [ -d "$dir/.git" ]; then
+      repo_name=$(basename "$dir")
+      echo "Processing $repo_name"
+      cd "$dir"
+      echo -e "\n===== $repo_name =====\n" >> ~/$output
+      git log --author="jmicalizzi@bbrpartners.com" --since="$from" --until="$to" --pretty=format:"%an | %ad | %s" --date=iso >> ~/$output
+      echo -e "" >> ~/$output # Adds a newline
+    fi
+  done
+
+  # Also do ~/.dotfiles
+  cd ~/.dotfiles
+  echo -e "\n===== dotfiles =====\n" >> ~/$output
+  git log --author="jmicalizzi@bbrpartners.com" --since="$from" --until="$to" --pretty=format:"%an | %ad | %s" --date=iso >> ~/$output
+  echo -e "" >> ~/$output # Adds a newline
+
+  cd "$start_dir"
+}
+
 alias jm_pyact='source .venv/bin/activate'
 alias jm_pydeact='deactivate'
