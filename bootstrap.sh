@@ -85,7 +85,7 @@ cp -f ./configs/tlrc.toml $HOME/.config/tlrc/config.toml
 
 # Add snowflake toml
 mkdir -p $HOME/.snowflake
-cp -f snowflake_config.toml $HOME/.snowflake/config.toml
+cp -f ./configs/snowflake.toml $HOME/.snowflake/config.toml
 chmod 0600 $HOME/.snowflake/config.toml
 snow --install-completion
 
