@@ -1,6 +1,3 @@
 [user]
     name = Joel Micalizzi
-    email = jmicaliz@gmail.com
-
-[core]
-    excludesfile = ~/.gitignore_global
+    email = jmicalizzi@bbrpartners.com
