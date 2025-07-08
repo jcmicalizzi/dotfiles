@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Environment Variables
-export GIT_COMMIT_AUTHOR="Joel M <jmicaliz@gmail.com>"
+export GIT_COMMIT_AUTHOR="Joel Micalizzi <jmicalizzi@bbrpartners.com>"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
