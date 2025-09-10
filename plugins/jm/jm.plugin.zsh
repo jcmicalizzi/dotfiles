@@ -69,3 +69,4 @@ jm_git_work_log(){
 
 alias jm_pyact='source .venv/bin/activate'
 alias jm_pydeact='deactivate'
+alias jm_tfp='terraform plan -out=$HOME/tfplan && terraform show -json $HOME/tfplan > $HOME/tfplan.json'
