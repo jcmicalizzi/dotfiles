@@ -77,7 +77,7 @@ export  PATH="$HOME/bin:$PATH"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python uv vscode kona jm docker docker-compose terraform azure custom_azure)
+plugins=(git python uv vscode kona de docker docker-compose terraform azure custom_azure)
 
 source $ZSH/oh-my-zsh.sh
 
