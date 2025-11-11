@@ -1,18 +1,18 @@
 # Custom commands
-jm_load_dotenv(){
+de_load_dotenv(){
   if [ -f .env ]; then
     # Open .env, pipe to sed which ignores lines starting with "#", then execute each export
     export $(cat .env | sed 's/#.*//g' | xargs)
   fi
 }
 
-jm_print_colors(){
+de_print_colors(){
   for i in {0..255}
       do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}
   done
 }
 
-jm_git_commit(){
+de_git_commit(){
   mm=""
   branch=""
 
@@ -38,8 +38,8 @@ jm_git_commit(){
   fi
 }
 
-jm_git_work_log(){
-  output="jm_git_work_log.txt"
+de_git_work_log(){
+  output="de_git_work_log.txt"
   rm -f ~/$output  # Clear the file if it exists
 
   from="$1" # Date format: YYYY-MM-DD
@@ -67,6 +67,6 @@ jm_git_work_log(){
   cd "$start_dir"
 }
 
-alias jm_pyact='source .venv/bin/activate'
-alias jm_pydeact='deactivate'
-alias jm_tfp='terraform plan -out=$HOME/tfplan && terraform show -json $HOME/tfplan > $HOME/tfplan.json'
+alias de_pyact='source .venv/bin/activate'
+alias de_pydeact='deactivate'
+alias de_tfp='terraform plan -out=$HOME/tfplan && terraform show -json $HOME/tfplan > $HOME/tfplan.json'
