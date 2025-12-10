@@ -34,3 +34,4 @@ brew "tflint"
 
 brew "snowflake-cli"
 brew "azure-cli"
+brew "sqlcmd"
