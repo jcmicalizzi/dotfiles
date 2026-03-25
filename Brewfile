@@ -27,6 +27,8 @@ brew "rlwrap"
 
 brew "coder"
 
+cask "claude-code"
+
 tap "hashicorp/tap"
 brew "hashicorp/tap/terraform"
 
