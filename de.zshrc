@@ -77,7 +77,7 @@ export  PATH="$HOME/bin:$PATH"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python uv vscode kona de docker docker-compose terraform azure custom_azure)
+plugins=(git python uv vscode kona de docker docker-compose terraform azure custom_azure claude_code)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,6 +90,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Environment Variables
 export GIT_COMMIT_AUTHOR="Joel Micalizzi <jmicalizzi@bbrpartners.com>"
+export ANTHROPIC_MODEL="opus"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
