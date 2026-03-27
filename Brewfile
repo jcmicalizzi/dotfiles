@@ -1,39 +1,49 @@
+# === Taps ===
+tap "hashicorp/tap"
+
+# === Build dependencies (pyenv/python) ===
 brew "gcc"
 brew "openssl"
-brew "readline" 
+brew "readline"
 brew "sqlite3"
 brew "xz"
-brew "zlib" 
-brew "tcl-tk@8"
-brew "libb2"
+brew "zlib"
+brew "tcl-tk@8"        # needed by pyenv for tkinter
+brew "libb2"           # blake2 hashing, python build dep
+
+# === Shell & terminal ===
 brew "tmux"
-
 brew "starship"
-
-brew "uv"
-
+brew "direnv"
 brew "fzf"
+brew "ripgrep"
+
+# === CLI tools ===
 brew "jq"
 brew "httpie"
-brew "pgcli"
-brew "tlrc"
-brew "ripgrep"
-brew "direnv"
-brew "gh"
+brew "tlrc"            # tldr client in Rust
 brew "ncdu"
+brew "gh"
 
-brew "kona"
-brew "rlwrap"
+# === Python ===
+brew "uv"
 
-brew "coder"
+# === Data & databases ===
+brew "pgcli"
+brew "sqlcmd"
+brew "snowflake-cli"
 
-cask "claude-code"
-
-tap "hashicorp/tap"
+# === Cloud & infra ===
+brew "azure-cli"
 brew "hashicorp/tap/terraform"
-
 brew "tflint"
 
-brew "snowflake-cli"
-brew "azure-cli"
-brew "sqlcmd"
+# === Languages & runtimes ===
+brew "node"
+brew "fnm"
+brew "kona"
+brew "rlwrap"          # readline wrapper for kona REPL
+
+# === Dev platforms ===
+brew "coder"
+cask "claude-code"
