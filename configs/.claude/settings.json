@@ -2,7 +2,8 @@
     "model": "opus",
     "permissions": {
         "allow": [
-            "Bash(git add*)"
+            "Bash(git add*)",
+            "Bash(git commit:*)"
         ]
     }
 }
