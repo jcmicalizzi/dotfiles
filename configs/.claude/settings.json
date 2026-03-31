@@ -7,13 +7,18 @@
             "Bash(git reset:*)",
             "Bash(gh pr:*)",
             "Bash(git push:*)",
+            "Bash(git log:*)",
             "mcp__claude_ai_Atlassian__getJiraIssue",
             "mcp__claude_ai_Atlassian__getAccessibleAtlassianResources",
             "mcp__claude_ai_Atlassian__getTransitionsForJiraIssue",
             "mcp__claude_ai_Atlassian__transitionJiraIssue",
             "mcp__claude_ai_Atlassian__getJiraIssueTypeMetaWithFields",
             "mcp__claude_ai_Atlassian__editJiraIssue",
-            "WebFetch(domain:fivetran.com)"
+            "mcp__claude_ai_Atlassian__createJiraIssue",
+            "mcp__claude_ai_Atlassian__getJiraProjectIssueTypesMetadata",
+            "mcp__claude_ai_Atlassian__atlassianUserInfo",
+            "WebFetch(domain:fivetran.com)",
+            "Bash(uv run:*)"
         ]
     }
 }
