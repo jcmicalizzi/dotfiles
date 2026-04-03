@@ -102,4 +102,13 @@ cp -rf ./configs/.claude/* $HOME/.claude/
 # Make repos directory
 mkdir -p $HOME/repos
 
+# Add daily cron job to run bootstrap at 1am (idempotent)
+CRON_CMD="0 1 * * * $HOME/.dotfiles/bootstrap.sh >> /tmp/bootstrap-cron.log 2>&1"
+if ! crontab -l 2>/dev/null | grep -qF "$HOME/.dotfiles/bootstrap.sh"; then
+    (crontab -l 2>/dev/null; echo "$CRON_CMD") | crontab -
+    echo "Cron job added for daily bootstrap at 1am."
+else
+    echo "Cron job for daily bootstrap already exists."
+fi
+
 echo "Bootstrap completed!"
