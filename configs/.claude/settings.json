@@ -1,28 +1,43 @@
 {
-    "model": "opus",
     "permissions": {
         "allow": [
-            "Bash(git add*)",
+            "Bash(find:*)",
+
+            "Bash(git add:*)",
+            "Bash(git branch:*)",
             "Bash(git commit:*)",
-            "Bash(git reset:*)",
-            "Bash(gh pr:*)",
-            "Bash(git push:*)",
-            "Bash(git log:*)",
             "Bash(git fetch:*)",
+            "Bash(git log:*)",
+            "Bash(git push:*)",
             "Bash(git rebase:*)",
-            "mcp__claude_ai_Atlassian__getJiraIssue",
-            "mcp__claude_ai_Atlassian__getAccessibleAtlassianResources",
-            "mcp__claude_ai_Atlassian__getTransitionsForJiraIssue",
-            "mcp__claude_ai_Atlassian__transitionJiraIssue",
-            "mcp__claude_ai_Atlassian__getJiraIssueTypeMetaWithFields",
-            "mcp__claude_ai_Atlassian__editJiraIssue",
-            "mcp__claude_ai_Atlassian__createJiraIssue",
-            "mcp__claude_ai_Atlassian__getJiraProjectIssueTypesMetadata",
-            "mcp__claude_ai_Atlassian__atlassianUserInfo",
-            "mcp__claude_ai_Atlassian__searchJiraIssuesUsingJql",
-            "WebFetch(domain:fivetran.com)",
+            "Bash(git reset:*)",
+
+            "Bash(gh pr:*)",
+
+            "Bash(grep:*)",
+
+            "Bash(terraform:*)",
+
             "Bash(uv run:*)",
+
+            "mcp__claude_ai_Atlassian__atlassianUserInfo",
+            "mcp__claude_ai_Atlassian__createJiraIssue",
+            "mcp__claude_ai_Atlassian__editJiraIssue",
+            "mcp__claude_ai_Atlassian__getAccessibleAtlassianResources",
+            "mcp__claude_ai_Atlassian__getJiraIssue",
+            "mcp__claude_ai_Atlassian__getJiraIssueTypeMetaWithFields",
+            "mcp__claude_ai_Atlassian__getJiraProjectIssueTypesMetadata",
+            "mcp__claude_ai_Atlassian__getTransitionsForJiraIssue",
+            "mcp__claude_ai_Atlassian__searchJiraIssuesUsingJql",
+            "mcp__claude_ai_Atlassian__transitionJiraIssue",
+
+            "Read(//home/coder/repos/**)",
+
+            "WebFetch(domain:fivetran.com)",
             "WebSearch"
+        ],
+        "deny": [
+            "Bash(terraform apply:*)"
         ]
     }
 }
