@@ -6,7 +6,7 @@ cd "$(dirname "${BASH_SOURCE}")";
 # If debian-based system, install some necessary libraries
 if [ -f /etc/debian_version ]; then
     echo "Installing necessary libraries for Debian-based systems..."
-    sudo apt update && sudo apt install -y build-essential procps curl file git
+    sudo apt update && sudo apt install -y build-essential procps curl file git zip
 fi
 
 # Clone the repository
