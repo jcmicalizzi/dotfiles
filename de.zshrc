@@ -90,7 +90,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Environment Variables
 export GIT_COMMIT_AUTHOR="Joel Micalizzi <jmicalizzi@bbrpartners.com>"
-export ANTHROPIC_MODEL="opus"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
