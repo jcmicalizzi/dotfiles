@@ -71,6 +71,15 @@ cp -f de.zshrc $HOME/.zshrc
 brew update
 brew bundle --file ./Brewfile
 
+# Install Claude Code
+if ! command -v claude &> /dev/null; then
+    echo "Installing Claude Code..."
+    npm install -g @anthropic-ai/claude-code
+else
+    echo "Updating Claude Code..."
+    claude update
+fi
+
 # Add starship toml
 mkdir -p $HOME/.config 
 cp -f ./configs/starship.toml $HOME/.config/starship.toml

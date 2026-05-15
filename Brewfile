@@ -46,4 +46,3 @@ brew "rlwrap"          # readline wrapper for kona REPL
 
 # === Dev platforms ===
 brew "coder"
-cask "claude-code"
